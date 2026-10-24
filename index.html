@@ -297,13 +297,13 @@ h3{font:700 17px/1.25 var(--font-display)}
 /* home */
 .hphoto{position:relative;width:calc(100% + 32px);margin-inline:-16px;aspect-ratio:4/5;justify-self:center}
 .hphoto img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%)}
-.hphoto .tag.t1{left:8%;top:16%}
+.hphoto .tag.t1{left:3%;top:11%}
 .hphoto .tag.t2{right:6%;bottom:18%;left:auto;top:auto}
 @media (min-width:760px) and (max-width:1000px){.hphoto{width:40%!important}}
 @media (min-width:760px){
   .hphoto{position:absolute;right:0;top:0;bottom:64px;width:46%;margin:0;aspect-ratio:auto}
   .hphoto img{object-position:60% 40%;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 34%),linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 34%),linear-gradient(to bottom,#000 78%,transparent 100%);-webkit-mask-composite:source-in;mask-composite:intersect}
-  .hphoto .tag.t1{left:22%;top:14%}
+  .hphoto .tag.t1{left:15%;top:9%}
   .hphoto .tag.t2{right:8%;bottom:16%}
 }
 .main.home{padding-block:0 150px}
@@ -395,26 +395,26 @@ function IMG(n){return IMGDATA[n]||''}
 var CATS=['Tea & Coffee','Fries','Sandwiches & pizza','Maggi'];
 var MENU=[
   {id:'tea',d:'Classic hot milk tea, brewed fresh',cat:0,name:'Tea',price:15,icon:'cup',img:'tea',sf:1},
-  {id:'coffee',d:'Rich, strong and milky hot coffee',cat:0,name:'Coffee',price:25,icon:'cup',img:'coffee',pop:1,sf:1},
+  {id:'coffee',d:'Rich, strong and milky hot coffee',cat:0,name:'Coffee',price:25,icon:'cup',img:'coffee',sf:1},
   {id:'blacktea',d:'Strong tea brewed without milk',cat:0,name:'Black tea',price:15,icon:'cup',img:'blacktea',sf:1},
-  {id:'lemonginger',d:'Hot tea with fresh lemon and ginger',cat:0,name:'Lemon ginger tea',price:25,icon:'cup',img:'lemonginger',sf:1},
+  {id:'lemonginger',d:'Hot tea with fresh lemon and ginger',cat:0,name:'Lemon ginger tea',price:25,icon:'cup',img:'lemonginger',sf:1,pop:1},
   {id:'greentea',d:'Light and refreshing green tea',cat:0,name:'Green tea',price:25,icon:'cup',img:'greentea',sf:1},
-  {id:'blackcoffee',d:'Bold hot coffee, no milk',cat:0,name:'Black coffee',price:25,icon:'cup',img:'blackcoffee',sf:1},
+  {id:'blackcoffee',d:'Bold hot coffee, no milk',cat:0,name:'Black coffee',price:25,icon:'cup',img:'blackcoffee',sf:1,pop:1},
   {id:'coldcoffee',d:'Chilled, creamy iced coffee',cat:0,name:'Cold coffee',price:50,icon:'glass',img:'coldcoffee',sf:1},
   {id:'lemonsoda',d:'Fizzy soda with fresh lemon',cat:0,name:'Lemon soda',price:40,icon:'glass'},
-  {id:'fries',d:'Crispy golden french fries',cat:1,name:'French fries',price:60,icon:'fries',img:'fries',pop:1},
+  {id:'fries',d:'Crispy golden french fries',cat:1,name:'French fries',price:60,icon:'fries',img:'fries'},
   {id:'peri',d:'Fries tossed in spicy peri peri masala',cat:1,name:'Peri peri french fries',price:80,icon:'fries'},
-  {id:'cheeseperi',d:'Peri peri fries topped with creamy melted cheese',cat:1,name:'Cheese peri peri french fries',price:110,icon:'fries',img:'cheese-peri-fries',pop:1},
+  {id:'cheeseperi',d:'Peri peri fries topped with creamy melted cheese',cat:1,name:'Cheese peri peri french fries',price:110,icon:'fries',img:'cheese-peri-fries'},
   {id:'chutney',d:'Toasted sandwich with green chutney and melted cheese',cat:2,name:'Chutney cheese sandwich',price:40,icon:'sandwich',img:'chutney-sandwich'},
-  {id:'aloochutney',d:'Spiced aloo filling with chutney and cheese',cat:2,name:'Aloo chutney cheese sandwich',price:40,icon:'sandwich',img:'aloo-sandwich'},
+  {id:'aloochutney',d:'Spiced aloo filling with chutney and cheese',cat:2,name:'Aloo chutney cheese sandwich',price:40,icon:'sandwich',img:'aloo-sandwich',pop:1},
   {id:'vegcheesesand',d:'Corn and veggies loaded with melted cheese',cat:2,name:'Veg cheese sandwich',price:75,icon:'sandwich',img:'vegcheese-sandwich'},
   {id:'vegsand',d:'Fresh veggies and chutney in toasted bread',cat:2,name:'Veg sandwich',price:50,icon:'sandwich'},
-  {id:'paneer',d:'Grilled paneer with veggies and cheese',cat:2,name:'Paneer sandwich',price:90,icon:'sandwich',img:'paneer-sandwich',pop:1},
+  {id:'paneer',d:'Grilled paneer with veggies and cheese',cat:2,name:'Paneer sandwich',price:90,icon:'sandwich',img:'paneer-sandwich'},
   {id:'pizza',d:'Cheesy veg pizza with fresh toppings',cat:2,name:'Veg cheese pizza',price:120,icon:'pizza',img:'pizza'},
   {id:'plainmaggi',d:'Classic 2-minute Maggi noodles',cat:3,name:'Plain Maggi',price:30,icon:'cup',img:'maggi-plain'},
   {id:'masalamaggi',d:'Maggi with an extra kick of masala',cat:3,name:'Masala Maggi',price:40,icon:'cup',img:'maggi-masala'},
   {id:'cheesemaggi',d:'Creamy Maggi topped with melted cheese',cat:3,name:'Cheese Maggi',price:55,icon:'cup',img:'maggi-cheese'},
-  {id:'vegmaggi',d:'Maggi loaded with peas, carrot and tomato',cat:3,name:'Veg Maggi',price:55,icon:'cup',img:'maggi-veg'}
+  {id:'vegmaggi',d:'Maggi loaded with peas, carrot and tomato',cat:3,name:'Veg Maggi',price:55,icon:'cup',img:'maggi-veg',pop:1}
 ];
 var BREAKS=[
   {name:'Morning break',start:'10:45',end:'11:00'},
